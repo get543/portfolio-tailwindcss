@@ -1,4 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
+/* @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["index.html"],
   darkMode: "class",
@@ -16,6 +16,7 @@ module.exports = {
       },
       screens: {
         "2xl": "1320px",
+        "sm": "360px"
       },
     },
   },

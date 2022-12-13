@@ -15,7 +15,7 @@ localStorage.theme = "dark";
 localStorage.removeItem("theme");
 
 // Navbar Fixed
-window.onscroll = function () {
+window.onscroll = function() {
   const header = document.querySelector("header");
   const fixedNav = header.offsetTop;
 

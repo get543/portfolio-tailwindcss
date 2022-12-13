@@ -521,9 +521,9 @@ video {
   padding-left: 16px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 360px) {
   .container {
-    max-width: 640px;
+    max-width: 360px;
   }
 }
 
@@ -714,10 +714,6 @@ video {
   max-width: 120px;
 }
 
-.max-w-\[200px\] {
-  max-width: 200px;
-}
-
 .origin-top-left {
   transform-origin: top left;
 }
@@ -792,14 +788,14 @@ video {
   border-top-width: 1px;
 }
 
-.border-slate-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(203 213 225 / var(--tw-border-opacity));
-}
-
 .border-slate-800 {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
 .bg-transparent {
@@ -987,6 +983,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
 .text-slate-300 {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
@@ -1059,11 +1060,9 @@ body {
   --tw-bg-opacity: 0.7;
 }
 
-@media (prefers-color-scheme: dark) {
-  .navbar-fixed {
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-  }
+.dark .navbar-fixed {
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.7;
 }
 
 .navbar-fixed {
@@ -1084,11 +1083,9 @@ body {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  .hamburger-line {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
+.dark .hamburger-line {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -1177,54 +1174,64 @@ body {
   color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:border-slate-800 {
-    --tw-border-opacity: 1;
-    border-color: rgb(30 41 59 / var(--tw-border-opacity));
-  }
-
-  .dark\:bg-dark {
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-darkish {
-    --tw-bg-opacity: 1;
-    background-color: rgb(18 28 53 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-slate-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-slate-400 {
-    --tw-text-opacity: 1;
-    color: rgb(148 163 184 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-slate-800 {
-    --tw-text-opacity: 1;
-    color: rgb(30 41 59 / var(--tw-text-opacity));
-  }
+.dark .dark\:h-0 {
+  height: 0px;
 }
 
-@media (min-width: 640px) {
+.dark .dark\:w-0 {
+  width: 0px;
+}
+
+.dark .dark\:border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
+.dark .dark\:bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-darkish {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 28 53 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+@media (min-width: 360px) {
   .sm\:left-1\/2 {
     left: 50%;
   }
 
-  .sm\:h-\[450px\] {
-    height: 450px;
+  .sm\:mt-10 {
+    margin-top: 2.5rem;
   }
 
-  .sm\:w-\[450px\] {
-    width: 450px;
+  .sm\:h-\[250px\] {
+    height: 250px;
+  }
+
+  .sm\:w-\[250px\] {
+    width: 250px;
   }
 
   .sm\:-translate-x-1\/2 {
@@ -1241,6 +1248,10 @@ body {
 @media (min-width: 768px) {
   .md\:left-1\/2 {
     left: 50%;
+  }
+
+  .md\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .md\:h-\[450px\] {
